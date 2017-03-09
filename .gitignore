@@ -1,0 +1,7 @@
+target/
+bin/
+project/
+.swp
+.idea
+_site
+.DS_Store

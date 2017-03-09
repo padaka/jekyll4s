@@ -5,7 +5,7 @@ import org.http4s.dsl._
 import org.http4s.server.ServerApp
 import org.http4s.server.blaze.BlazeBuilder
 
-object Http extends ServerApp {
+object HttpApplication extends ServerApp {
 
   val service = HttpService {
     case req@GET -> Root =>

@@ -1,0 +1,23 @@
+# Site settings
+title: M$!L#
+email: m41l3@yahoo.com
+description: > # this means to ignore newlines until "baseurl:"
+  This is the awesome site of Paul Kang
+baseurl: "/blog" # the subpath of your site, e.g. /blog/
+url: "http://m41l3.com" # the base hostname & protocol for your site
+#twitter_username: paul
+#github_username: padaka
+
+source: "source"
+
+destination: "_site"
+
+# Build settings
+template_engine: jade
+
+defaults:
+-
+  scope:
+    path: "path"
+  values:
+    layout: "site"

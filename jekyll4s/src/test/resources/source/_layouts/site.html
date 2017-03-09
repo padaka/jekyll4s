@@ -1,0 +1,29 @@
+---
+title: Hi
+---
+- import com.github.padaka.jekyll4s._
+- import net.jcazevedo.moultingyaml._
+- import net.jcazevedo.moultingyaml.DefaultYamlProtocol._
+-@ val page: Page
+-@ val site: Site
+
+div#site-info
+    p #{site.version}
+    p #{site.url}
+
+div#main
+    p #{page.permalink}
+    p #{page.content}
+
+div#data
+    - val data = site.data[Map[String, Map[String, String]]]("data")
+    - data.foreach { case (name, values) =>
+        p #{name} #{values.mkString}
+    - }
+
+div#feed
+    - site.posts.foreach { p =>
+        div
+            p #{p.layout}
+            p #{p.permalink}
+    - }
